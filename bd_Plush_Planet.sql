@@ -1,3 +1,6 @@
+--
+drop database db_Plush_Planet;
+
 CREATE DATABASE db_Plush_Planet
 
 DEFAULT CHARACTER SET utf8
@@ -39,29 +42,29 @@ CREATE TABLE tbl_urso_pelucia(
 select * from tbl_urso_pelucia;
 select * from tbl_colecoes;
 insert into tbl_urso_pelucia values
-    (default, 'Pelucia Harry Potter original','Esta pelúcia traz à vida o icônico protagonista da amada série de livros e filmes de Harry Potter.', 149.99, 59, 'img_harry.png', 1),
-    (default, 'Pelúcia Hermione Granger original', 'Uma adorável pelúcia da inteligente e corajosa Hermione Granger.', 129.99, 29, 'img_hermione.jpg', 1),
-    (default, 'Pelúcia Ron Weasley original', 'Um boneco de pelúcia do fiel amigo Ron Weasley.', 129.99, 23, 'img_ron.jpg', 1),
-    (default, 'Pelúcia Albus Dumbledore original', 'Um boneco de pelúcia do lendário diretor de Hogwarts.', 159.99, 0, 'img_dumbledore.jpg', 1),
-    (default, 'Pelúcia Severus Snape original', 'Um boneco de pelúcia do complexo professor Snape.', 129.99, 78, 'img_snape.jpg', 1),
-    (default, 'Pelúcia Luna Lovegood original', 'Uma adorável pelúcia da excêntrica Luna Lovegood.', 139.99, 48, 'img_luna.jpg', 1),
-    (default, 'Pelúcia Dobby original', 'Uma pelúcia do carismático elfo doméstico Dobby.', 99.99, 10, 'img_dobby.jpg', 1),
-    (default, 'Pelúcia Hagrid original', 'Um boneco de pelúcia do amigável Guardião das Chaves de Hogwarts, Hagrid.', 149.99, 150, 'img_hagrid.jpg', 1),
-    (default, 'Pelúcia Bellatrix Lestrange original', 'Uma pelúcia da sinistra bruxa Bellatrix Lestrange.', 139.99, 85, 'img_bellatrix.jpg', 1),
-    (default, 'Pelúcia Sirius Black original', 'Um boneco de pelúcia do enigmático Sirius Black.', 139.99, 1, 'img_sirius.jpg', 1);
+	(default, 'Pelucia Draco Malfoy original','Icônico antagonista dos filmes de Harry Potter, Draco Malfoy, o mais amado entre os fãs.', 149.99, 59, 'img_draco', 1),
+    (default, 'Pelucia Harry Potter original','Esta pelúcia traz à vida o icônico protagonista da amada série de livros e filmes de Harry Potter.', 149.99, 59, 'img_harry', 1),
+    (default, 'Pelúcia Hermione Granger original', 'Uma adorável pelúcia da inteligente e corajosa Hermione Granger.', 129.99, 29, 'img_hermione', 1),
+    (default, 'Pelúcia Ron Weasley original', 'Um boneco de pelúcia do fiel amigo Ron Weasley.', 129.99, 23, 'img_ron', 1),
+    (default, 'Pelúcia Albus Dumbledore original', 'Um boneco de pelúcia do lendário diretor de Hogwarts.', 159.99, 0, 'img_dumbledore', 1),
+    (default, 'Pelúcia Dobby original', 'Uma pelúcia do carismático elfo doméstico Dobby.', 99.99, 10, 'img_dobby', 1),
+    (default, 'Pelúcia Hagrid original', 'Um boneco de pelúcia do amigável Guardião das Chaves de Hogwarts, Hagrid.', 149.99, 150, 'img_hagrid', 1),
+    (default, 'Pelúcia Minerva McGonagall original', 'Uma pelúcia da enigmática Professora Minerva McGonagall .', 139.99, 1, 'img_minerva', 1),
+    (default, 'Pelúcia Bellatrix Lestrange original', 'Uma pelúcia da sinistra bruxa Bellatrix Lestrange.', 139.99, 85, 'img_bellatrix', 1),
+	(default, 'Pelúcia Luna Lovegood original', 'Uma adorável pelúcia da excêntrica Luna Lovegood.', 139.99, 48, 'img_luna', 1);
 
 
 insert into tbl_urso_pelucia values
-	(default, 'Pelúcia Homem de Ferro original', 'Este boneco de pelúcia do enigmático Homem de Ferro.', 149.99, 245, 'img_homem_ferro.png', 4),
-    (default, 'Pelúcia Capitão América original', 'Uma pelúcia do patriota super soldado, Capitão América.', 139.99, 55, 'img_capitao_america.png', 4),
-    (default, 'Pelúcia Thor original', 'Um boneco de pelúcia do poderoso Deus do Trovão, Thor.', 149.99, 15, 'img_thor.png', 4),
-    (default, 'Pelúcia Hulk original', 'Uma adorável pelúcia do gigante verde, o Hulk.', 159.99, 0, 'img_hulk.png', 4),
-    (default, 'Pelúcia Viúva Negra original', 'Uma pelúcia da espiã habilidosa, Viúva Negra.', 139.99, 4,  'img_viuvanegra.png', 4),
-    (default, 'Pelúcia Homem-Aranha original', 'Um boneco de pelúcia do amigável bairro Homem-Aranha.', 129.99, 187, 'img_homemaranha.png', 4),
-    (default, 'Pelúcia Pantera Negra original', 'Uma pelúcia do rei de Wakanda, o Pantera Negra.', 149.99, 10, 'img_panteranegra.png', 4),
-    (default, 'Pelúcia Doutor Estranho original', 'Um boneco de pelúcia do Mago Supremo, Doutor Estranho.', 139.99, 2, 'img_doutorestranho.png', 4),
-    (default, 'Pelúcia Groot original', 'Uma adorável pelúcia da árvore falante, Groot.', 129.99, 10, 'img_groot.png', 4),
-    (default, 'Pelúcia Rocket Raccoon original', 'Uma pelúcia do guaxinim engenheiro, Rocket Raccoon.', 139.99, 0, 'img_rocketraccoon.png', 4);
+	(default, 'Pelúcia Homem de Ferro original', 'Este boneco de pelúcia do enigmático Homem de Ferro.', 149.99, 245, 'img_homem_ferro', 4),
+    (default, 'Pelúcia Capitão América original', 'Uma pelúcia do patriota super soldado, Capitão América.', 139.99, 55, 'img_capitao_america', 4),
+    (default, 'Pelúcia Thor original', 'Um boneco de pelúcia do poderoso Deus do Trovão, Thor.', 149.99, 15, 'img_thor', 4),
+    (default, 'Pelúcia Hulk original', 'Uma adorável pelúcia do gigante verde, o Hulk.', 159.99, 0, 'img_hulk', 4),
+    (default, 'Pelúcia Viúva Negra original', 'Uma pelúcia da espiã habilidosa, Viúva Negra.', 139.99, 4,  'img_viuvanegra', 4),
+    (default, 'Pelúcia Homem-Aranha original', 'Um boneco de pelúcia do amigável bairro Homem-Aranha.', 129.99, 187, 'img_homemaranha', 4),
+    (default, 'Pelúcia Pantera Negra original', 'Uma pelúcia do rei de Wakanda, o Pantera Negra.', 149.99, 10, 'img_panteranegra', 4),
+    (default, 'Pelúcia Doutor Estranho original', 'Um boneco de pelúcia do Mago Supremo, Doutor Estranho.', 139.99, 2, 'img_doutorestranho', 4),
+    (default, 'Pelúcia Groot original', 'Uma adorável pelúcia da árvore falante, Groot.', 129.99, 10, 'img_groot', 4),
+    (default, 'Pelúcia Rocket Raccoon original', 'Uma pelúcia do guaxinim engenheiro, Rocket Raccoon.', 139.99, 0, 'img_rocketraccoon', 4);
 
 create view vw_pelucia
 AS SELECT
