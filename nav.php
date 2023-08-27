@@ -18,11 +18,11 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Harry Potter</a>
-          <a class="dropdown-item" href="#">Disney</a>
           <a class="dropdown-item" href="#">Minecraft</a>
           <a class="dropdown-item" href="#">Pokémon</a>
           <a class="dropdown-item" href="#">Marvel</a>
-          <a class="dropdown-item" href="#">Hora de Aventura</a>
+          <a class="dropdown-item" href="#">Disney</a>
+          <a class="dropdown-item" href="#">cartoon network</a>
           <a class="dropdown-item" href="#">Gravity Falls</a>
           <a class="dropdown-item" href="#">Animes Geral</a>
           <a class="dropdown-item" href="#"></a>
