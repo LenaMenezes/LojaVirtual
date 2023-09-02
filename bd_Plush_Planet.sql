@@ -49,9 +49,7 @@ insert into tbl_urso_pelucia values
     (default, 'Pelúcia Albus Dumbledore original', 'Um boneco de pelúcia do lendário diretor de Hogwarts.', 159.99, 0, 'img_dumbledore', 1),
     (default, 'Pelúcia Dobby original', 'Uma pelúcia do carismático elfo doméstico Dobby.', 99.99, 10, 'img_dobby', 1),
     (default, 'Pelúcia Hagrid original', 'Um boneco de pelúcia do amigável Guardião das Chaves de Hogwarts, Hagrid.', 149.99, 150, 'img_hagrid', 1),
-    (default, 'Pelúcia Minerva McGonagall original', 'Uma pelúcia da enigmática Professora Minerva McGonagall .', 139.99, 1, 'img_minerva', 1),
-    (default, 'Pelúcia Bellatrix Lestrange original', 'Uma pelúcia da sinistra bruxa Bellatrix Lestrange.', 139.99, 85, 'img_bellatrix', 1),
-	(default, 'Pelúcia Luna Lovegood original', 'Uma adorável pelúcia da excêntrica Luna Lovegood.', 139.99, 48, 'img_luna', 1);
+    (default, 'Pelúcia Minerva McGonagall original', 'Uma pelúcia da enigmática Professora Minerva McGonagall .', 139.99, 1, 'img_minerva', 1);
 
 
 insert into tbl_urso_pelucia values
@@ -78,5 +76,12 @@ FROM tbl_urso_pelucia AS up
 INNER JOIN tbl_colecoes AS c ON up.id_colecao = c.id_colecao; 
 
 select * from vw_pelucia;
-select * from tbl_urso_pelucia;
-select * from tbl_colecoes;
+
+
+select nome_urso,preco,img_urso,quantidade_estoque from vw_pelucia;
+
+
+
+
+-- select * from tbl_urso_pelucia;
+-- select * from tbl_colecoes;
