@@ -8,27 +8,26 @@
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(página atual)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Novidades</a>
+        <a class="nav-link" href="lancamento.php">Novidades</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Pelúcias
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Harry Potter</a>
-          <a class="dropdown-item" href="#">Minecraft</a>
-          <a class="dropdown-item" href="#">Pokémon</a>
-          <a class="dropdown-item" href="#">Marvel</a>
-          <a class="dropdown-item" href="#">Disney</a>
-          <a class="dropdown-item" href="#">cartoon network</a>
-          <a class="dropdown-item" href="#">Gravity Falls</a>
-          <a class="dropdown-item" href="#">Animes Geral</a>
-          <a class="dropdown-item" href="#"></a>
+          <a class="dropdown-item" href="categoria.php?cat=Harry Potter">Harry Potter</a>
+          <a class="dropdown-item" href="categoria.php?cat=Minecraft">Minecraft</a>
+          <a class="dropdown-item" href="categoria.php?cat=Marvel">Marvel</a>
+          <a class="dropdown-item" href="categoria.php?cat=Disney">Disney</a>
+          <a class="dropdown-item" href="categoria.php?cat=cartoon network">Cartoon network</a>
+          <a class="dropdown-item" href="categoria.php?cat=Gravity Falls">Gravity Falls</a>
+          <a class="dropdown-item" href="categoria.php?cat=Animes Geral">Animes Geral</a>
+          <a class="dropdown-item" href="categoria.php"></a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Outras</a>
+          <a class="dropdown-item" href="categoria.php">Outras</a>
         </div>
       </li>
     </ul>

@@ -19,7 +19,7 @@
         include 'cabecalho.html';
         include 'conexao.php';
 
-        $consulta = $cn->query('select nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia');
+        $consulta = $cn->query("select nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia where lancamento = 's'");
     ?>
 
 <div class="container-fluid">
