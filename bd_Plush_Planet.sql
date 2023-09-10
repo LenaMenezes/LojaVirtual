@@ -1,4 +1,4 @@
-drop database db_Plush_Planet;
+--drop database db_Plush_Planet;
 
 CREATE DATABASE db_Plush_Planet
 
@@ -38,6 +38,7 @@ CREATE TABLE tbl_urso_pelucia(
     id_colecao INT,
     FOREIGN KEY (id_colecao) REFERENCES tbl_colecoes(id_colecao)
 );
+
 select * from tbl_urso_pelucia;
 select * from tbl_colecoes;
 insert into tbl_urso_pelucia values
@@ -80,8 +81,32 @@ select * from vw_pelucia;
 -- drop view vw_pelucia
 select nome_urso,preco,img_urso,quantidade_estoque from vw_pelucia where lancamento = 's';
 
+-- insert da pelucias de minecraft com procedure
 
+Delimiter $$
+Create Procedure spInserttbl_urso_pelucia (vid_urso int, vnome_urso varchar(60), vdescricao varchar(100), vpreco decimal(6,2), vquantidade_estoque int, vimg_urso varchar(255), vlancamento char(1), vid_colecao int)
+begin
+INSERT INTO tbl_urso_pelucia (id_urso, nome_urso,descricao,preco, quantidade_estoque, img_urso, lancamento, id_colecao)
+		VALUES(vid_urso, vnome_urso, vdescricao, vpreco, vquantidade_estoque, vimg_urso, vlancamento, vid_colecao);
+end $$
 
+call spInserttbl_urso_pelucia(null,'Minecraft Zumbi Explorador Pelúcia Em Chamas', 'Zumbi do Minecraft: Olhos vazios, pele esverdeada, fome eterna.', 99.98, 27,'img_zumbi', 'n', 2);
+call spInserttbl_urso_pelucia(null,'Pelúcia Minecraft Panda','Panda adorável, preto e branco, no Minecraft.',120.00, 77, 'img_panda', 's', 2);
+call spInserttbl_urso_pelucia(null,'Pelúcia Esqueleto Minecraft', 'Esqueleto misterioso do minecraft', 85.99, 10,'img_esqueleto','s', 2);
+call spInserttbl_urso_pelucia(null,'Pelúcia Minecraft Explorador Creeper', 'Monstro noturno, olhos brilhantes, silencioso e sinistro.'. 149.98, 5, 'img_creeper','s',2);
+call spInserttbl_urso_pelucia(null,'Minecraft Happy Explorer Sela Porco Pelúcia', 'Porco rosa que fornece comida em Minecraft.'230.00, 0, 'img_porco','s',2);
+call spInserttbl_urso_pelucia(null,'Pelúcia Ovelha Negra Minecraft','Ovelha negra: Rebelde no mundo dos blocos.',150.00,0, 'img_ovelha_negra', 's',2);
 
--- select * from tbl_urso_pelucia;
--- select * from tbl_colecoes;
+-- insert das pelucias da disney com procedure
+
+call spInserttbl_urso_pelucia(null,'Pelúcia Lilo Stitch','Stitch: O alienígena travesso da Disney!',120.00,88,'img_stitch','n',5);
+call spInserttbl_urso_pelucia(null,'Pelúcia Mickey Disney Com Som Multikids','O Mickey é o ratinho mais amado da Disney!',55.99,55, 'img_mickey','n',5);
+call spInserttbl_urso_pelucia(null,'Pelúcia Minnie Disney C/ Som ','Minnie, a adorável ratinha da Disney, esbanja charme e alegria!',89.99,1, 'img_minnie','n',5);
+call spInserttbl_urso_pelucia(null,'Pumba Pelúcia Timão E Pumbaa Disney', 'Leal amigo de Simba e Timão.', 98.99,48,'img_pumbaa','s',5);
+
+-- inserte das pelucias da cartoon com procedure
+call spInserttbl_urso_pelucia(null,'Pelúcia Darwin - O Incrível Mundo De Gumball','Darwin, o peixe transformado, amigo fiel e hilário de Gumball.',99.90,99,'img_darwin','s',6);
+call spInserttbl_urso_pelucia(null, 'Pelúcia Gumball - O Incrível Mundo De Gumball','Gumball Watterson, o gato azul, encara aventuras hilárias com sua família em Elmore.',99.90,0,'img_gumball','n',6);
+call spInserttbl_urso_pelucia(null, 'Coleção Urso Sem Curso Pelúcia','Urso Sem Curso: Pelúcia fofa para abraçar e colecionar!', 219.99,98,'img_ursos_cursos','s',6)
+
+-- inssert de animes no geral
