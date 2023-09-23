@@ -16,7 +16,7 @@ CREATE TABLE tbl_colecoes(
 
 select * from tbl_colecoes;
 
- insert into tbl_colecoes values
+insert into tbl_colecoes values
     (default,'Harry Potter', 'Ursos inspirados no universo de Harry Potter'),
     (default,'Minecraft', 'Ursos inspirados no game Minecraft ' ),
     (default,'Pokemon', 'Ursos inspirados no universo de Pokemon'),
@@ -109,4 +109,28 @@ call spInserttbl_urso_pelucia(null,'Pelúcia Darwin - O Incrível Mundo De Gumba
 call spInserttbl_urso_pelucia(null, 'Pelúcia Gumball - O Incrível Mundo De Gumball','Gumball Watterson, o gato azul, encara aventuras hilárias com sua família em Elmore.',99.90,0,'img_gumball','n',6);
 call spInserttbl_urso_pelucia(null, 'Coleção Urso Sem Curso Pelúcia','Urso Sem Curso: Pelúcia fofa para abraçar e colecionar!', 219.99,98,'img_ursos_cursos','s',6)
 
--- inssert de animes no geral
+CREATE TABLE tbl_usuario(
+    cod_usuario int primary key auto_increment,
+    nome_usuario varchar(80) not null,
+    dc_email varchar(80) not null,
+    dc_senha varchar(6) not null,
+    dc_status boolean not null,
+    dc_endereco varchar(80) not null,
+    dc_cidade varchar(30) not null,
+    num_cep char(9) not null
+);
+
+-- insert com procedure na tabela usuario 
+Delimiter $$
+Create Procedure spInserttbl_usuario (vcod_usuario int, vnome_usuario varchar(80), vdc_email varchar(80), vdc_senha varchar(6), vdc_status boolean, vdc_endereco varchar(80), vdc_cidade varchar(30), vnum_cep char(9) )
+begin
+INSERT INTO tbl_usuario (cod_usuario, nome_usuario, dc_email, dc_senha, dc_status, dc_endereco, dc_cidade, num_cep)
+		VALUES(vcod_usuario, vnome_usuario, vdc_email, vdc_senha, vdc_status, vdc_endereco, vdc_cidade, vnum_cep);
+end $$
+
+call spInserttbl_usuario(null, 'Lena', 'helenajmenezes@gmail.com', '123456', 1, 'Rua Gabriel Arregui', 'São Paulo', '12345-789');
+call spInserttbl_usuario(null, 'Gigi Borba', 'gigi@gmail.com', 'jimin', 0, 'Av Paulista', 'São Paulo', '12345-790');
+call spInserttbl_usuario(null, 'Rebecao Martins', 'rebecao@gmail.com', 'imgay', 0, 'Av Internacional', 'São Paulo', '12345-791');
+
+select * from tbl_usuario;
+
