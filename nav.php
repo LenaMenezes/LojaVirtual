@@ -4,7 +4,6 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -35,6 +34,6 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
-    <a class="link_login" href="#"><img id="login" src="img/login.png" alt="login">  Logon</a>
+    <a class="link_login" href="form.php"><img id="login" src="img/login.png" alt="login">  Logon</a>
   </div>
 </nav>
