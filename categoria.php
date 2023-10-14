@@ -15,9 +15,10 @@
 
 <body>
     <?php
+        include 'conexao.php';
         include 'nav.php';
         include 'cabecalho.html';
-        include 'conexao.php';
+        
 
         $cat = $_GET['cat'];
 
@@ -31,7 +32,7 @@
                 <img src="img/<?php echo $exibe['img_urso']; ?>.png" class="img-responsive" style="width: 100%" alt="">
                 <div>
                     <h4>
-                        <?php echo mb_strimwidth($exibe['nome_urso'], 0, 30, '...'); ?>
+                        <?php echo mb_strimwidth($exibe['nome_urso'], 0, 25, '...'); ?>
                     </h4>
                 </div>
                 <div>
