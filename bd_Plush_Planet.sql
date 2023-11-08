@@ -1,4 +1,4 @@
---drop database db_Plush_Planet;
+-- drop database db_Plush_Planet;
 
 CREATE DATABASE db_Plush_Planet
 
@@ -93,8 +93,8 @@ end $$
 call spInserttbl_urso_pelucia(null,'Minecraft Zumbi Explorador Pelúcia Em Chamas', 'Zumbi do Minecraft: Olhos vazios, pele esverdeada, fome eterna.', 99.98, 27,'img_zumbi', 'n', 2);
 call spInserttbl_urso_pelucia(null,'Pelúcia Minecraft Panda','Panda adorável, preto e branco, no Minecraft.',120.00, 77, 'img_panda', 's', 2);
 call spInserttbl_urso_pelucia(null,'Pelúcia Esqueleto Minecraft', 'Esqueleto misterioso do minecraft', 85.99, 10,'img_esqueleto','s', 2);
-call spInserttbl_urso_pelucia(null,'Pelúcia Minecraft Explorador Creeper', 'Monstro noturno, olhos brilhantes, silencioso e sinistro.'. 149.98, 5, 'img_creeper','s',2);
-call spInserttbl_urso_pelucia(null,'Minecraft Happy Explorer Sela Porco Pelúcia', 'Porco rosa que fornece comida em Minecraft.'230.00, 0, 'img_porco','s',2);
+call spInserttbl_urso_pelucia(null,'Pelúcia Minecraft Explorador Creeper', 'Monstro noturno, olhos brilhantes, silencioso e sinistro.', 149.98, 5, 'img_creeper','s',2);
+call spInserttbl_urso_pelucia(null,'Minecraft Happy Explorer Sela Porco Pelúcia', 'Porco rosa que fornece comida em Minecraft.', 230.00, 0, 'img_porco','s',2);
 call spInserttbl_urso_pelucia(null,'Pelúcia Ovelha Negra Minecraft','Ovelha negra: Rebelde no mundo dos blocos.',150.00,0, 'img_ovelha_negra', 's',2);
 
 -- insert das pelucias da disney com procedure
@@ -134,3 +134,10 @@ call spInserttbl_usuario(null, 'Rebecao Martins', 'rebecao@gmail.com', 'imgay', 
 
 select * from tbl_usuario;
 
+use db_plush_planet
+
+CREATE USER 'lena'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+GRANT ALL PRIVILEGES ON db_Plush_Planet.* TO 'lena'@'localhost' WITH GRANT OPTION;
+
+CREATE USER 'HelenaM'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234567';
+ GRANT ALL PRIVILEGES ON db_Plush_Planet.* TO 'HelenaM'@'localhost' WITH GRANT OPTION;
