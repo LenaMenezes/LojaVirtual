@@ -31,3 +31,6 @@ body{
     margin-left: 20px;
     text-decoration: none;
 }
+.btn-danger {
+    margin-left: 10px;
+}
