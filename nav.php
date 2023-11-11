@@ -34,15 +34,19 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
-    <?php
-      if (empty($_SESSION['ID'])){?>
-      <a class="link_login" href="form.php"><img class="login" src="img/login.png" alt="login">  Logon</a>
+    <?php if(empty($_SESSION['ID'])) { ?>
+      <a class="link_login" href="form.php"><img class="login" src="img/login.png" alt="login">  Logon</a>      
     <?php } else {
-      $consulta_usuario = $cn->query("select nome_usuario from tbl_usuario where cod_usuario = '$_SESSION[ID]'");
-      $exibe_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
-      ?>
-      <a class="link_login" href="#"><img class="login" src="img/user.png" alt="login"><?php echo $exibe_usuario['nome_usuario'];?></a>
-      <a class="link_login" href="sair.php"><img class="login" src="img/login.png" alt="login">  Sair</a>  
-      <?php }?>    
+      if($_SESSION["Status"] ==0){
+        $consulta_usuario = $cn->query("select nome_usuario from tbl_usuario where cod_usuario = '$_SESSION[ID]'");
+        $exibe_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
+    ?> 
+      <a class="link_login" href="#"><img class="login" src="img/user.png" alt="user">  <?php echo $exibe_usuario['nome_usuario'];?></a>      
+      <a class="link_login" href="sair.php"><img class="login" src="img/login.png" alt="login">  Sair</a>
+      <?php } else { ?>
+
+        <a class="link_login" href="Adm.php"><button id="adm" class="btn btn-danger">Administrador</button></a>      
+        <a class="link_login" href="sair.php"><img class="login" src="img/login.png" alt="login">  Sair</a>  
+    <?php } }?>
     </div>
 </nav>
