@@ -141,3 +141,7 @@ GRANT ALL PRIVILEGES ON db_Plush_Planet.* TO 'lena'@'localhost' WITH GRANT OPTIO
 
 CREATE USER 'HelenaM'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234567';
  GRANT ALL PRIVILEGES ON db_Plush_Planet.* TO 'HelenaM'@'localhost' WITH GRANT OPTION;
+ 
+ 
+DELETE FROM tbl_urso_pelucia
+WHERE id_urso = 10;

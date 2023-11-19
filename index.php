@@ -10,6 +10,16 @@
     <!-- CSS projeto -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <style>
+        .col-sm-3 img{
+            width:311.5px;
+            height: 310.23px;
+            border:none ;
+        }
+        .nome{
+            margin-top: 20px;
+        }
+    </style>
     <title>Plush Planet</title>
 </head>
 
@@ -28,7 +38,7 @@
         <?php while ($exibe = $consulta->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="col-sm-3">
                 <img src="img/<?php echo $exibe['img_urso']; ?>.png" class="img-responsive" style="width: 100%" alt="">
-                <div>
+                <div class="nome">
                     <h4>
                         <?php echo mb_strimwidth($exibe['nome_urso'], 0, 25, '...'); ?>
                     </h4>

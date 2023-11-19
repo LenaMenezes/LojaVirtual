@@ -119,15 +119,15 @@
         color: black;
         }
 
-        .signupContainer a {
-        font-size: .7em;
-        font-weight: 500;
-        background-color: #2e2e2e;
-        color: white;
-        text-decoration: none;
-        padding: 8px 15px;
-        border-radius: 20px;
-        }
+            /* .signupContainer a {
+            font-size: .7em;
+            font-weight: 500;
+            background-color: #2e2e2e;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            } */
 
         .button {
         position: relative;
@@ -148,6 +148,11 @@
         .button-content {
         position: relative;
         z-index: 1;
+        cursor: pointer;
+        }
+        .button-content a {
+        text-decoration: none;
+        color: #fff;
         }
 
         .button::before {
@@ -171,6 +176,12 @@
             margin-top: 20px;
         }
 
+        .button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao passar o mouse sobre o botão */
+        }
+
+    
 
     </style>
 </head>
@@ -199,7 +210,7 @@
         <div class="signupContainer">
             <p class="text_cadastro">Ainda não sou cadastrado</p>
             <button type="submit" class="button">
-                <span class="button-content">Inscreva-se </span>
+                <span class="button-content"><a href="formUsuario.php">Inscreva-se</a></span>
             </button>
         </div>
     </form>
