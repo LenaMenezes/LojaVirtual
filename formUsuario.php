@@ -152,19 +152,18 @@
 		<div class="row">
 		   
 								
-            <form class="form">
+            <form method="post" action="inserirusuario.php" name="logon" class="form">
                 <p class="title">Create account</p>
-                <input type="text" class="input" placeholder="Name" name="nome" required id="nome">
-                <input type="text" class="input" placeholder="Sobrenome"  name="sobrenome" required id="sobrenome">
-                <input type="email" class="input" placeholder="Email" required id="email" name="email">
-                <input type="password" class="input" placeholder="Password" required id="senha" name="senha">
-                <textarea name="endereco" rows="1" class="input" placeholder="Endereço" required id="endereco"></textarea>
-                <input name="cidade" type="text" class="input" required id="cidade" placeholder="Cidade">
-                <input type="text" name="cep" class="input" placeholder="Cep" required id="cep">
+                <input type="text" class="input" placeholder="Name" name="txtnome" required id="nome">
+                <input type="email" class="input" placeholder="Email" required id="email" name="txtemail">
+                <input type="password" class="input" placeholder="Password" required id="senha" name="txtsenha">
+                <textarea name="txtendereco" rows="1" class="input" placeholder="Endereço" required id="endereco"></textarea>
+                <input name="txtcidade" type="text" class="input" required id="cidade" placeholder="Cidade">
+                <input type="text" name="txtcep" class="input" placeholder="Cep" required id="cep">
 
-                <!-- <button class="form-btn">Create account</button>    -->
+                
                 <button type="submit" class="button">
-                    <span class="button-content"><a href="">Cadastre-se</a></span>
+                    <span class="button-content">Cadastrar</span>
                 </button>
             </form>		
 		</div>
