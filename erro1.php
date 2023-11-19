@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,11 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 
     <title>Plush Planet | Login de usuário</title>
-
+	
     <style>
+        .navbar{
+            margin-bottom: 0;
+        }    
         .erro {
             position: relative;
             width: 100%; /* Alterado para 100% para ocupar a largura disponível */
@@ -28,26 +30,49 @@
             border-radius: 30px;
             box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
         }
-
-        #btn-novamente{    
+        
+        .btn-1{
+            position: relative;
+            width: 100%;
+            border: 2px solid #8000ff;
+            background-color: #8000ff;
+            height: 40px;
+            color: white;
+            font-size: .8em;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
             margin-top: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #DCDCDC;
-            color: #000;
-            width: 340px;
+            text-decoration: none;
+            color: white;
+            
+        }
+        .btn-1:hover {
+            background-color: #8000ff;
+        }
+        .btn-1:active {
+            background-color: #8000ff;
         }
 
     </style>
+	
 </head>
 
-<body>	
-    <?php
-        
-        include 'conexao.php';	
-        include 'nav.php';
-        include 'cabecalho.html';
-        
-    ?>
+<body>
+	
+<?php
+	
+	include 'conexao.php';	
+	include 'nav.php';
+	include 'cabecalho.html';
+	
+	?>
 	
 	
 	<div class="container-fluid">
@@ -56,23 +81,22 @@
 		
 			<div class="erro">
 				
-				<h2>Usuario ou senha incorreto!!</h2>
+				<h2>Email já em uso !!!</h2>
 				
-				<a id="btn-novamente"href="form.php" class="btn btn-link" role="button">Tentar Novamente</a>
+				<a href="formusuario.php" class="btn-1" role="button">Tentar Novamente</a>
 				
-                    <a href="formUsuario.php">
-                        <button type="button" class="btn btn-link">
-                            
-                            Ainda não sou cadastrado
-                            
-                        </button>
-                    </a>
+				<a href="esquecisenha.php" class="btn-1" role="button">Esqueci a senha</a>
+				
+							
 			</div>
 		</div>
 	</div>
-    <br>
+    <br><br>
 	
 	<?php include 'rodape.html' ?>
+	
+	
+	
 	
 </body>
 </html>
