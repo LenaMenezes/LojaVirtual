@@ -13,10 +13,15 @@
 
     $exibe = $consulta ->fetch(PDO::FETCH_ASSOC);
 
-    if ($consulta->rowCount() == 1){
-        echo 'email ja cadastrado!';
+    if ($consulta->rowCount() == 1) {
+        header('location: erro1.php');
+    } else {
+        $incluir = $cn->query("
+            INSERT INTO tbl_usuario(nome_usuario, dc_email, dc_senha, dc_status, dc_endereco, dc_cidade, num_cep)
+            VALUES ('$nome', '$email', '$senha', '0', '$end', '$cidade', '$cep')
+        ");
+    
+        header('location: ok.php');
     }
-    else{
-        echo 'usuario pode ser cadastrado';
-    }
+    
 ?>
