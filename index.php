@@ -30,7 +30,7 @@
         include 'nav.php';
         include 'cabecalho.html';
 
-        $consulta = $cn->query('select nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia');
+        $consulta = $cn->query('select id_urso,nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia');
     ?>
 
 <div class="container-fluid">
@@ -49,9 +49,11 @@
                     </h5>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-lg btn-block btn-info">
-                        <span class="bi bi-info-circle-fill"> Detalhes</span>
-                    </button>
+                    <a href="detalhes.php?cd=<?php echo  $exibe['id_urso'];?>">
+                        <button class="btn btn-lg btn-block btn-info">
+                            <span class="bi bi-info-circle-fill"> Detalhes</span>
+                        </button>
+                    </a>
                 </div>
 
                 <div class="text-center">

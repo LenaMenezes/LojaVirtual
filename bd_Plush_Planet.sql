@@ -66,6 +66,7 @@ insert into tbl_urso_pelucia values
 
 create view vw_pelucia
 AS SELECT
+	up.id_urso,
     up.nome_urso,
     up.descricao,
     up.preco,
@@ -143,5 +144,5 @@ CREATE USER 'HelenaM'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234
  GRANT ALL PRIVILEGES ON db_Plush_Planet.* TO 'HelenaM'@'localhost' WITH GRANT OPTION;
  
  
-DELETE FROM tbl_urso_pelucia
-WHERE id_urso = 10;
+DELETE FROM tbl_usuario
+WHERE cod_usuario = 9;
