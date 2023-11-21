@@ -31,10 +31,15 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+
+
+    <form class="form-inline my-2 my-lg-0" role="search" name="frmpesquisa" method="get" action="busca.php">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" name="txtBuscar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
+
+
+
     <?php if(empty($_SESSION['ID'])) { ?>
       <a class="link_login" href="form.php"><img class="login" src="img/login.png" alt="login">  Logon</a>      
     <?php } else {
