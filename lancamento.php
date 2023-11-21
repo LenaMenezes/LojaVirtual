@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <title>Plush Planet</title>
+    <style>
+        .col-sm-3 img{
+            width:311.5px;
+            height: 310.23px;
+            border:none ;
+        }
+        .nome{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +29,7 @@
         include 'cabecalho.html';
         include 'conexao.php';
 
-        $consulta = $cn->query("select nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia where lancamento = 's'");
+        $consulta = $cn->query("select id_urso,nome_urso, preco, img_urso, quantidade_estoque from vw_pelucia where lancamento = 's'");
     ?>
 
 <div class="container-fluid">
@@ -38,9 +48,11 @@
                     </h5>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-lg btn-block btn-info">
-                        <span class="bi bi-info-circle-fill"> Detalhes</span>
-                    </button>
+                    <a href="detalhes.php?cd=<?php echo  $exibe['id_urso'];?>">
+                        <button class="btn btn-lg btn-block btn-info">
+                            <span class="bi bi-info-circle-fill"> Detalhes</span>
+                        </button>
+                    </a>
                 </div>
 
                 <div class="text-center">

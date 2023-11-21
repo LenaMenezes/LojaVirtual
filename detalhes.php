@@ -49,6 +49,12 @@
 	include 'nav.php';
 	include 'cabecalho.html';
 
+
+	$cd_livro = $_GET['cd'];
+	$consulta = $cn ->query("select * from vw_pelucia where id_urso='$cd_livro'");
+	$exibe = $consulta->fetch(PDO::FETCH_ASSOC);
+
+
 	
 	?>
 	
@@ -62,22 +68,22 @@
 			 
 			 <h1>Detalhes do Produto</h1>
 			 
-			 <img src="https://placehold.it/900x640" class="img-responsive" style="width:100%;">
+			 <img src="img/<?php echo $exibe['img_urso'];?>.png" class="img-responsive" style="width:100%;">
 		
-				<div class="col-sm-4 col-sm-offset-1" style="margin-top: 10px;"><img src="https://placehold.it/900x640" class="img-responsive"></div>
-				<div class="col-sm-4 col-sm-offset-1" style="margin-top: 10px;"><img src="https://placehold.it/900x640" class="img-responsive"></div>
-			
+				
 		</div>
 		
 				
- 		 <div class="col-sm-7"><h1>Nome do Produto</h1>
+ 		 <div class="col-sm-7"><h1><?php echo $exibe['nome_urso'];?></h1>
+		<br>		
+		<p><?php echo $exibe['descricao'];?></p>
 		
-		<p>Descrição do Produto</p>
+		<p>Coleção: <?php echo $exibe['nome_colecao'];?></p>
+
+		<p>Estoque: <?php echo $exibe['quantidade_estoque'];?></p>
 		
-		<p>Marca</p>
-		
-		<p>R$ 0,00</p>
-			 
+		<p>Preço: R$<?php echo number_format($exibe['preco'], 2, ',', '.'); ?></p>
+		<br>
 			 
 		<button class="btn btn-lg btn-success">Comprar</button>
 				
