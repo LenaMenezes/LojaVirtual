@@ -65,34 +65,34 @@
 
     $pesquisa = $_GET['txtBuscar'];
     $consulta = $cn->query("select * from vw_pelucia where nome_urso like concat('%','$pesquisa','%') or nome_colecao like concat ('%','$pesquisa','%') ");
-    $exibe = $consulta ->fetch(PDO::FETCH_ASSOC);
+   
 	
 	
 	?>
 	
 <div class="container-fluid">
 	
+    <?php while( $exibe = $consulta ->fetch(PDO::FETCH_ASSOC)){ ?>
 	
-	
-	<div class="row" style="margin-top: 15px;">
-		
-		<div class="col-sm-1 col-sm-offset-1"><img src="https://placehold.it/960x640" class="img-responsive"></div>
-		<div class="col-sm-5"><h4 style="padding-top:20px"><?php echo $exibe['nome_urso'];?></h4></div>
-		<div class="col-sm-2"><h4 style="padding-top:20px">Preço</h4></div>
-		<div class="col-sm-2 col-xs-offset-right-1" style="padding-top:20px">
-        <a>
-            <button class="btn btn-lg btn-block btn-default">
+        <div class="row" style="margin-top: 15px;">
+            
+            <div class="col-sm-1 col-sm-offset-1"><img src="img/<?php echo $exibe['img_urso']; ?>.png" class="img-responsive"></div>
+            <div class="col-sm-5"><h4 style="padding-top:20px"><?php echo $exibe['nome_urso'];?></h4></div>
+            <div class="col-sm-2"><h4 style="padding-top:20px">$<?php echo number_format($exibe['preco'], 2, ',', '.'); ?> </h4></div>
+            <div class="col-sm-2 col-xs-offset-right-1" style="padding-top:20px">
+            <a href="detalhes.php?cd=<?php echo  $exibe['id_urso'];?>">
+                <button class="btn btn-lg btn-block btn-default">
+                        
+                    <span class="glyphicon glyphicon-info-sign"> Detalhes</span>
+                        
+                </button>
+            </a>
+            
+            
+            </div> 
                     
-                <span class="glyphicon glyphicon-info-sign"> Detalhes</span>
-                    
-            </button>
-        </a>
-		
-		
-		</div> 
-				
-	</div>		
-	
+        </div>		
+	<?php }?>
 
 	
 </div>
