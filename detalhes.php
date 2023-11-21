@@ -49,11 +49,14 @@
 	include 'nav.php';
 	include 'cabecalho.html';
 
-
+	if(!empty($_GET['cd'])){
 	$cd_livro = $_GET['cd'];
 	$consulta = $cn ->query("select * from vw_pelucia where id_urso='$cd_livro'");
 	$exibe = $consulta->fetch(PDO::FETCH_ASSOC);
-
+	}
+	else{
+		header("location:index.php");
+	}
 
 	
 	?>
