@@ -63,9 +63,14 @@
 	include 'nav.php';
 	include 'cabecalho.html';
 
+    if(empty($_GET['txtBuscar'])){
+        echo "<html><script>location.href='index.php'</script></html>";
+    }
     $pesquisa = $_GET['txtBuscar'];
     $consulta = $cn->query("select * from vw_pelucia where nome_urso like concat('%','$pesquisa','%') or nome_colecao like concat ('%','$pesquisa','%') ");
-   
+    if($consulta->rowCount() == 0){
+        echo "<html><script>location.href='erro2.php'</script></html>";
+    }
 	
 	
 	?>
